@@ -8,7 +8,7 @@
 .silentlibrary-hero h1 {
   max-width: 9ch;
   color: #173d35;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display-silentlibrary);
   font-style: italic;
   font-weight: 500;
   letter-spacing: -0.055em;
@@ -31,7 +31,14 @@
 
 .silentlibrary-metrics strong {
   color: #1d654f;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display-silentlibrary);
+}
+
+.case-study--silentlibrary .case-heading h2,
+.case-study--silentlibrary .case-actions h2,
+.case-study--silentlibrary .silentlibrary-workflow h3,
+.case-study--silentlibrary .boundary-grid h3 {
+  font-family: var(--font-display-silentlibrary);
 }
 
 .silentlibrary-workflow {
@@ -57,7 +64,7 @@
 
 .editorial-proof article:last-child { border-right: 0; }
 .editorial-proof span { color: #b17d23; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; }
-.editorial-proof h3 { margin-top: 0.7rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.45rem; }
+.editorial-proof h3 { margin-top: 0.7rem; font-family: var(--font-display-silentlibrary); font-size: 1.45rem; }
 .editorial-proof p { margin-bottom: 0; color: var(--muted); line-height: 1.65; }
 
 .silentlibrary-gallery {

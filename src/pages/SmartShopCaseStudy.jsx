@@ -41,7 +41,7 @@ function SmartShopCaseStudy() {
     <>
       <a className="skip-link" href="#case-main">Skip to case study</a>
       <Header homePrefix="/" />
-      <main id="case-main">
+      <main id="case-main" className="case-study case-study--smartshop">
         <section className="case-hero smartshop-hero" aria-labelledby="case-title">
           <div className="container case-hero__grid">
             <div>

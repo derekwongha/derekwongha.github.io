@@ -34,7 +34,7 @@ function HopeHandsCaseStudy() {
     <>
       <a className="skip-link" href="#case-main">Skip to case study</a>
       <Header homePrefix="/" />
-      <main id="case-main">
+      <main id="case-main" className="case-study case-study--hopehands">
         <section className="case-hero hopehands-hero" aria-labelledby="case-title">
           <div className="container case-hero__grid">
             <div>

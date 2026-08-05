@@ -8,3 +8,30 @@
 .boundary-grid p { margin: 0; color: var(--muted); line-height: 1.65; }
 @media (max-width: 900px) { .hopehands-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .boundary-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) { .hopehands-metrics, .hopehands-gallery { grid-template-columns: 1fr; } }
+.case-study--hopehands .case-hero h1,
+.case-study--hopehands .case-heading h2,
+.case-study--hopehands .case-actions h2,
+.case-study--hopehands .case-card h3,
+.case-study--hopehands .boundary-grid h3 {
+  font-family: var(--font-display-hopehands);
+}
+
+.case-study--hopehands .case-hero h1 {
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.case-study--hopehands .case-heading h2,
+.case-study--hopehands .case-actions h2 {
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.06;
+}
+
+.case-study--hopehands .case-card h3,
+.case-study--hopehands .boundary-grid h3 {
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.18;
+}
