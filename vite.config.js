@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         main: resolve(rootDirectory, 'index.html'),
         tastelocal: resolve(rootDirectory, 'projects/tastelocal/index.html'),
+        smartshop: resolve(rootDirectory, 'projects/smartshop/index.html'),
       },
     },
   },

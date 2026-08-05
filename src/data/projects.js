@@ -10,12 +10,13 @@ const projects = [
     featured: true,
   },
   {
-    title: 'SmartShop',
+    title: 'SmartShop AI',
     type: 'Supporting project',
-    summary: 'An e-commerce coursework project exploring AI-assisted search, recommendations, product content, review summaries, and a shopping assistant.',
-    technologies: ['React', 'Vite', 'Django REST Framework', 'MySQL'],
-    visualLabel: 'AI-assisted commerce',
-    sourceUrl: null,
+    summary: 'A grounded AI-assisted shopping demonstration with a 50-product synthetic catalogue, provider fallback, deterministic degradation, and verified backend testing.',
+    technologies: ['React', 'Django REST Framework', 'MySQL', 'OpenAI', 'Gemini'],
+    visualLabel: 'Grounded AI · synthetic catalogue',
+    caseStudyUrl: '/projects/smartshop/',
+    sourceUrl: 'https://github.com/derekwongha/smartshop-ai',
   },
   {
     title: 'HopeHands',

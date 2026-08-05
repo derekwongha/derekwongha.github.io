@@ -1,0 +1,10 @@
+.smartshop-hero { background: radial-gradient(circle at 82% 20%, #dcefe8 0, transparent 28%), linear-gradient(135deg, #fff 0%, #f6f9f8 58%, #e7eefc 100%); }
+.metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.metric-grid article { display: flex; min-height: 8.5rem; padding: 1.35rem; flex-direction: column; justify-content: center; background: white; border: 1px solid var(--line); border-top: 4px solid #208167; border-radius: 0.9rem; }
+.metric-grid strong { color: #176650; font-size: 2.35rem; line-height: 1; }
+.metric-grid span { margin-top: 0.65rem; color: var(--muted); font-weight: 750; }
+.case-card p { margin-bottom: 0; color: var(--muted); line-height: 1.65; }
+.smartshop-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.verification-note { margin-top: 2rem; }
+@media (max-width: 900px) { .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 650px) { .metric-grid, .smartshop-gallery { grid-template-columns: 1fr; } }

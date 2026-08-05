@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">SmartShop AI architecture and data flow</title>
+  <desc id="desc">A landscape diagram showing the React and Vite browser frontend sending Axios JSON requests to Django REST Framework. Django validates catalogue results, records generation-source metadata, accesses controlled synthetic MySQL data through the Django ORM, and optionally calls OpenAI first and Gemini second before using deterministic fallback or an explicit unavailable state. Provider keys remain backend-only.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#37546d"/>
+    </marker>
+    <marker id="arrowExternal" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b44b3e"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#274052" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 40px Arial, sans-serif; fill: #20384a; }
+      .subtitle { font: 400 20px Arial, sans-serif; fill: #557083; }
+      .section { font: 700 18px Arial, sans-serif; letter-spacing: 1.2px; fill: #476578; }
+      .boxTitle { font: 700 25px Arial, sans-serif; fill: #20384a; }
+      .boxText { font: 400 18px Arial, sans-serif; fill: #3d5668; }
+      .small { font: 400 16px Arial, sans-serif; fill: #526b7b; }
+      .label { font: 700 16px Arial, sans-serif; fill: #38566c; }
+      .local { stroke: #37546d; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .external { stroke: #b44b3e; stroke-width: 4; stroke-dasharray: 12 9; fill: none; marker-end: url(#arrowExternal); }
+      .card { stroke: #b8cbd6; stroke-width: 2; filter: url(#shadow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="#f7fafb"/>
+  <text x="80" y="72" class="title">SmartShop AI — Architecture and Grounded Data Flow</text>
+  <text x="80" y="106" class="subtitle">Supporting portfolio project • controlled synthetic data • truthful provider and fallback states</text>
+
+  <text x="80" y="158" class="section">BROWSER</text>
+  <text x="440" y="158" class="section">BACKEND APPLICATION</text>
+  <text x="1235" y="158" class="section">DATA</text>
+  <text x="920" y="534" class="section">OPTIONAL PROVIDERS</text>
+
+  <rect x="80" y="185" width="300" height="265" rx="24" fill="#ffffff" class="card"/>
+  <text x="110" y="230" class="boxTitle">React + Vite frontend</text>
+  <text x="110" y="268" class="boxText">Five grounded workflows:</text>
+  <text x="110" y="303" class="boxText">• Search</text>
+  <text x="110" y="335" class="boxText">• Recommendations</text>
+  <text x="110" y="367" class="boxText">• Product descriptions</text>
+  <text x="110" y="399" class="boxText">• Review summaries</text>
+  <text x="110" y="431" class="boxText">• Assistant</text>
+
+  <rect x="445" y="185" width="285" height="150" rx="24" fill="#eef5fa" class="card"/>
+  <text x="475" y="230" class="boxTitle">Django REST</text>
+  <text x="475" y="262" class="boxTitle">Framework API</text>
+  <text x="475" y="302" class="boxText">JSON endpoints + demo throttles</text>
+
+  <rect x="795" y="185" width="350" height="265" rx="24" fill="#fff7ed" stroke="#ddb47f" class="card"/>
+  <text x="825" y="230" class="boxTitle">Grounding boundary</text>
+  <text x="825" y="272" class="boxText">Catalogue validation</text>
+  <text x="825" y="306" class="boxText">Generation-source metadata</text>
+  <line x1="825" y1="330" x2="1115" y2="330" stroke="#dcc5a3" stroke-width="2"/>
+  <text x="825" y="365" class="small">Provider • deterministic fallback</text>
+  <text x="825" y="393" class="small">Stored data • unavailable</text>
+  <text x="825" y="425" class="small">Provider keys remain backend-only</text>
+
+  <rect x="1235" y="185" width="285" height="150" rx="24" fill="#edf8f1" stroke="#93c5aa" class="card"/>
+  <text x="1265" y="230" class="boxTitle">Django ORM</text>
+  <text x="1265" y="276" class="boxText">Managed data access</text>
+
+  <rect x="1235" y="385" width="285" height="175" rx="24" fill="#e7f5ee" stroke="#79b798" class="card"/>
+  <text x="1265" y="432" class="boxTitle">MySQL</text>
+  <text x="1265" y="471" class="boxText">Controlled synthetic</text>
+  <text x="1265" y="503" class="boxText">demo data</text>
+  <text x="1265" y="535" class="small">Catalogue • profiles • reviews</text>
+
+  <rect x="920" y="565" width="265" height="125" rx="24" fill="#fff1ef" stroke="#df958c" class="card"/>
+  <text x="950" y="610" class="boxTitle">OpenAI provider</text>
+  <text x="950" y="650" class="boxText">First attempt</text>
+
+  <rect x="1235" y="565" width="285" height="125" rx="24" fill="#fff1ef" stroke="#df958c" class="card"/>
+  <text x="1265" y="610" class="boxTitle">Gemini provider</text>
+  <text x="1265" y="650" class="boxText">Fallback attempt</text>
+
+  <rect x="795" y="735" width="475" height="105" rx="24" fill="#f2effa" stroke="#a89ac9" class="card"/>
+  <text x="825" y="780" class="boxTitle">Application resilience</text>
+  <text x="825" y="817" class="boxText">Deterministic fallback or explicit unavailable state</text>
+
+  <path d="M380 260 L445 260" class="local"/>
+  <text x="387" y="291" class="small">Axios</text>
+  <text x="390" y="311" class="small">JSON</text>
+
+  <path d="M730 260 L795 260" class="local"/>
+
+  <path d="M1145 260 L1235 260" class="local"/>
+  <text x="1150" y="238" class="small">Validated</text>
+  <text x="1164" y="256" class="small">query</text>
+
+  <path d="M1378 335 L1378 385" class="local"/>
+  <text x="1396" y="368" class="label">Read / write</text>
+
+  <path d="M1235 470 L1145 400" class="local"/>
+  <text x="1138" y="493" class="small">Catalogue records</text>
+
+  <path d="M970 450 L1018 565" class="external"/>
+  <text x="864" y="510" class="label">Optional call 1</text>
+
+  <path d="M1185 627 L1235 627" class="external"/>
+  <text x="1194" y="610" class="small">Then</text>
+
+  <path d="M1377 690 C1377 720 1270 710 1185 735" class="external"/>
+  <text x="1300" y="741" class="small">Provider failure</text>
+
+  <path d="M920 690 C900 715 875 721 865 735" class="external"/>
+  <text x="780" y="700" class="label">No safe result</text>
+
+  <path d="M795 788 C665 788 620 505 620 335" class="local"/>
+  <text x="575" y="675" class="label">Truthful response</text>
+
+  <rect x="80" y="748" width="575" height="92" rx="18" fill="#ffffff" stroke="#ccd9e0" stroke-width="2"/>
+  <text x="110" y="781" class="section">LEGEND</text>
+  <line x1="110" y1="810" x2="180" y2="810" stroke="#37546d" stroke-width="4"/>
+  <text x="195" y="816" class="small">Local application and data flow</text>
+  <line x1="410" y1="810" x2="480" y2="810" stroke="#b44b3e" stroke-width="4" stroke-dasharray="12 9"/>
+  <text x="495" y="816" class="small">Optional provider call</text>
+</svg>
