@@ -41,13 +41,13 @@ function HopeHandsCaseStudy() {
               <a className="back-link" href="/#projects">← Back to all projects</a>
               <p className="eyebrow">Supporting full-stack project</p>
               <h1 id="case-title">HopeHands</h1>
-              <p className="case-hero__lead">A role-protected volunteer onboarding and HubSpot CRM workflow with controlled CSV intake, administrative reporting, persisted synchronization states, and safe failure handling.</p>
+              <p className="case-hero__lead">A role-protected volunteer onboarding and HubSpot CRM workflow with controlled CSV intake, administrative reporting, persisted synchronization states, manual retry recovery, and safe failure handling.</p>
               <div className="hero-actions"><a className="button button--primary" href={sourceUrl} target="_blank" rel="noreferrer">View GitHub source</a></div>
             </div>
             <aside className="case-status" aria-label="Project status">
               <span>Project status</span><strong>Verified local demonstration</strong>
               <p>Source repository published. Application not publicly deployed.</p>
-              <dl><div><dt>Core stack</dt><dd>React · Django REST Framework · MySQL</dd></div><div><dt>Access</dt><dd>JWT · volunteer and staff boundaries</dd></div><div><dt>Verification</dt><dd>43 backend tests passed</dd></div></dl>
+              <dl><div><dt>Core stack</dt><dd>React · Django REST Framework · MySQL</dd></div><div><dt>Access</dt><dd>JWT · volunteer and staff boundaries</dd></div><div><dt>Verification</dt><dd>56 backend tests passed</dd></div></dl>
             </aside>
           </div>
         </section>
@@ -79,6 +79,11 @@ function HopeHandsCaseStudy() {
           <div className="case-copy-grid"><p><strong>Persisted state:</strong> Staff can inspect synchronization status, synthetic contact ID, reviewer, review time, and a safe failure message without seeing tokens or raw provider responses.</p><p><strong>Resilient behavior:</strong> CRM failure does not reverse approval, repeat approval is rejected, and already-synced records avoid duplicate synchronization.</p></div>
         </CaseSection>
 
+        <CaseSection id="crm-retry" eyebrow="Bounded recovery workflow" title="CRM Retry and Recovery">
+          <div className="case-copy-grid"><p><strong>Approval remains authoritative:</strong> A failed CRM state is visible to staff, but the Approved application, original reviewer, and review time remain persisted and unchanged.</p><p><strong>Retry only the boundary:</strong> Staff can manually retry the CRM operation for an eligible Approved record. Pending, Rejected, and already-synced records are blocked.</p></div>
+          <div className="boundary-grid"><article><h3>Visible failure</h3><p>The detail panel presents a bounded safe error and offers recovery only when the current state and configured mode can retry.</p></article><article><h3>Mock recovery</h3><p>The portfolio demonstration moves Failed to Mock Synced and persists a deterministic synthetic contact ID without a provider request.</p></article><article><h3>Duplicate prevention</h3><p>Successful records cannot retry again. This is a manual action only; no automatic background retry or queue is claimed.</p></article></div>
+        </CaseSection>
+
         <CaseSection id="gallery" eyebrow="Visual walkthrough" title="Four approved states from the synthetic demonstration">
           <div className="screenshot-grid hopehands-gallery">{hopeHandsScreenshots.map(([filename, caption, alt], index) => <figure key={filename}><a href={`${mediaRoot}/images/${filename}`} target="_blank" rel="noreferrer" aria-label={`Open screenshot ${index + 1} at full size: ${caption}`}><img src={`${mediaRoot}/images/${filename}`} alt={alt} loading="lazy" /></a><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{caption}</figcaption></figure>)}</div>
         </CaseSection>
@@ -87,8 +92,8 @@ function HopeHandsCaseStudy() {
           <div className="case-card-grid case-card-grid--three">{hopeHandsStack.map(([title, text]) => <article className="case-card case-card--stack" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
         </CaseSection>
 
-        <CaseSection id="verification" eyebrow="Verification" title="43 backend tests passed">
-          <div className="test-summary"><strong>43 / 43</strong><span>backend tests passed</span><dl><div><dt>Django check</dt><dd>Passed</dd></div><div><dt>Frontend lint and build</dt><dd>Passed</dd></div><div><dt>Responsive review</dt><dd>Passed</dd></div></dl></div>
+        <CaseSection id="verification" eyebrow="Verification" title="56 backend tests passed">
+          <div className="test-summary"><strong>56 / 56</strong><span>backend tests passed</span><dl><div><dt>Django check</dt><dd>Passed</dd></div><div><dt>Frontend lint and build</dt><dd>Passed</dd></div><div><dt>Responsive review</dt><dd>Passed</dd></div></dl></div>
           <p className="case-intro verification-note">Desktop, tablet, and mobile widths showed no horizontal page overflow. Provider tests and demonstration captures made zero real HubSpot calls.</p>
         </CaseSection>
 
