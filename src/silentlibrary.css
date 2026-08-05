@@ -1,0 +1,86 @@
+.silentlibrary-hero {
+  background:
+    linear-gradient(90deg, rgba(27, 78, 62, 0.08) 1px, transparent 1px) 0 0 / 5rem 5rem,
+    linear-gradient(180deg, #fbfaf5 0%, #f1f4ec 100%);
+  border-bottom: 1px solid #cfd8d0;
+}
+
+.silentlibrary-hero h1 {
+  max-width: 9ch;
+  color: #173d35;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+
+.silentlibrary-status {
+  border-top: 5px solid #1d654f;
+  border-radius: 0.25rem;
+  box-shadow: 0 1.1rem 2.8rem rgba(25, 57, 47, 0.1);
+}
+
+.silentlibrary-metrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.silentlibrary-metrics article {
+  border-top-color: #c79b42;
+  border-radius: 0.35rem;
+}
+
+.silentlibrary-metrics strong {
+  color: #1d654f;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.silentlibrary-workflow {
+  counter-reset: workflow;
+}
+
+.silentlibrary-workflow .case-card {
+  border-radius: 0.35rem;
+  border-top: 4px solid #1d654f;
+}
+
+.editorial-proof {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #183d34;
+  border-bottom: 1px solid #cfd8d0;
+}
+
+.editorial-proof article {
+  padding: 1.6rem;
+  border-right: 1px solid #cfd8d0;
+}
+
+.editorial-proof article:last-child { border-right: 0; }
+.editorial-proof span { color: #b17d23; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; }
+.editorial-proof h3 { margin-top: 0.7rem; font-family: Georgia, 'Times New Roman', serif; font-size: 1.45rem; }
+.editorial-proof p { margin-bottom: 0; color: var(--muted); line-height: 1.65; }
+
+.silentlibrary-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.silentlibrary-gallery figure {
+  border-radius: 0.35rem;
+}
+
+.silentlibrary-gallery figcaption span {
+  color: #9a6b1e;
+}
+
+@media (max-width: 900px) {
+  .silentlibrary-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .editorial-proof { grid-template-columns: 1fr; }
+  .editorial-proof article { border-right: 0; border-bottom: 1px solid #cfd8d0; }
+  .editorial-proof article:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 650px) {
+  .silentlibrary-metrics,
+  .silentlibrary-gallery { grid-template-columns: 1fr; }
+  .silentlibrary-hero h1 { font-size: clamp(3rem, 18vw, 4.7rem); }
+}

@@ -29,11 +29,12 @@ const projects = [
   },
   {
     title: 'SilentLibrary',
-    type: 'Additional coursework',
-    summary: 'A server-rendered library coursework project demonstrating Django fundamentals, authentication, catalogue search, relational data, and role checks.',
-    technologies: ['Django', 'Python', 'MySQL', 'HTML', 'CSS'],
-    visualLabel: 'Django foundations',
-    sourceUrl: null,
+    type: 'Foundational coursework',
+    summary: 'A foundational Django coursework project for searchable book discovery, role-aware catalogue administration, and a bounded borrowing and return workflow, presented through semantic templates and custom responsive CSS.',
+    technologies: ['Python', 'Django', 'Django Templates', 'MySQL', 'HTML', 'CSS'],
+    visualLabel: 'Server-rendered Django · custom HTML/CSS',
+    caseStudyUrl: '/projects/silentlibrary/',
+    sourceUrl: 'https://github.com/derekwongha/silentlibrary-django',
   },
 ]
 

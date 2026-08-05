@@ -14,6 +14,7 @@ export default defineConfig({
         tastelocal: resolve(rootDirectory, 'projects/tastelocal/index.html'),
         smartshop: resolve(rootDirectory, 'projects/smartshop/index.html'),
         hopehands: resolve(rootDirectory, 'projects/hopehands/index.html'),
+        silentlibrary: resolve(rootDirectory, 'projects/silentlibrary/index.html'),
       },
     },
   },
