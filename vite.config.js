@@ -13,6 +13,7 @@ export default defineConfig({
         main: resolve(rootDirectory, 'index.html'),
         tastelocal: resolve(rootDirectory, 'projects/tastelocal/index.html'),
         smartshop: resolve(rootDirectory, 'projects/smartshop/index.html'),
+        hopehands: resolve(rootDirectory, 'projects/hopehands/index.html'),
       },
     },
   },

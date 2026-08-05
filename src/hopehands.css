@@ -1,0 +1,10 @@
+.hopehands-hero { background: radial-gradient(circle at 82% 18%, #dcefe8 0, transparent 30%), linear-gradient(135deg, #fff 0%, #f6faf8 58%, #eef3fa 100%); }
+.hopehands-metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.hopehands-metrics article { border-top-color: #16835d; }
+.hopehands-metrics strong { color: #126044; }
+.hopehands-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.boundary-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.boundary-grid article { padding: 1.4rem; background: white; border: 1px solid var(--line); border-top: 4px solid #16835d; border-radius: 0.9rem; }
+.boundary-grid p { margin: 0; color: var(--muted); line-height: 1.65; }
+@media (max-width: 900px) { .hopehands-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .boundary-grid { grid-template-columns: 1fr; } }
+@media (max-width: 650px) { .hopehands-metrics, .hopehands-gallery { grid-template-columns: 1fr; } }

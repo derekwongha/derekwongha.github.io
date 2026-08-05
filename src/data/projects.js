@@ -21,10 +21,11 @@ const projects = [
   {
     title: 'HopeHands',
     type: 'Supporting project',
-    summary: 'A volunteer-management coursework application covering registration, account access, application review, and administrator workflows.',
-    technologies: ['React', 'Vite', 'Django REST Framework', 'MySQL', 'JWT'],
-    visualLabel: 'Volunteer workflows',
-    sourceUrl: null,
+    summary: 'A role-protected volunteer onboarding workflow with controlled CSV intake, administrative reporting, and failure-aware HubSpot synchronization.',
+    technologies: ['React', 'Django REST Framework', 'MySQL', 'JWT', 'HubSpot'],
+    visualLabel: 'Volunteer onboarding · resilient CRM boundary',
+    caseStudyUrl: '/projects/hopehands/',
+    sourceUrl: 'https://github.com/derekwongha/hopehands-volunteer',
   },
   {
     title: 'SilentLibrary',
