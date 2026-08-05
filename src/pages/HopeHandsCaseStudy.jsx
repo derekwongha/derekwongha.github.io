@@ -41,7 +41,7 @@ function HopeHandsCaseStudy() {
               <a className="back-link" href="/#projects">← Back to all projects</a>
               <p className="eyebrow">Supporting full-stack project</p>
               <h1 id="case-title">HopeHands</h1>
-              <p className="case-hero__lead">A role-protected volunteer onboarding workflow with controlled CSV intake, administrative reporting, and failure-aware HubSpot synchronization.</p>
+              <p className="case-hero__lead">A role-protected volunteer onboarding and HubSpot CRM workflow with controlled CSV intake, administrative reporting, persisted synchronization states, and safe failure handling.</p>
               <div className="hero-actions"><a className="button button--primary" href={sourceUrl} target="_blank" rel="noreferrer">View GitHub source</a></div>
             </div>
             <aside className="case-status" aria-label="Project status">
@@ -74,8 +74,9 @@ function HopeHandsCaseStudy() {
           <div className="boundary-grid"><article><h3>Public visitor</h3><p>Can submit a validated application. Account and volunteer records are created together.</p></article><article><h3>Volunteer</h3><p>Uses JWT authentication and resolves only the profile linked to the current user.</p></article><article><h3>Administrator</h3><p>Staff checks protect listing, reporting, decisions, deletion, and CSV intake on the server.</p></article></div>
         </CaseSection>
 
-        <CaseSection id="hubspot" eyebrow="Failure-aware synchronization" title="Three truthful HubSpot modes" tinted>
-          <div className="boundary-grid"><article><h3>Disabled</h3><p>The default portfolio mode makes no network request and clearly reports that synchronization is disabled.</p></article><article><h3>Mock</h3><p>A deterministic synthetic contact result exercises the success path without contacting a provider.</p></article><article><h3>Live</h3><p>An optional token, timeout, bounded errors, and duplicate protection contain provider behavior. Approval remains recorded on failure.</p></article></div>
+        <CaseSection id="hubspot" eyebrow="Enterprise integration boundary" title="CRM Integration Design" introduction="Administrator approval persists the application decision before the HubSpot boundary runs, so CRM availability never controls the core workflow." tinted>
+          <div className="boundary-grid"><article><h3>Disabled mode</h3><p>No provider request is made, and the persisted state truthfully reports that CRM synchronization is not configured.</p></article><article><h3>Mock mode</h3><p>A deterministic successful synchronization stores a synthetic contact ID and demonstrates the complete approval-to-CRM path without network access.</p></article><article><h3>Live mode</h3><p>Private environment configuration enables the optional provider path with a timeout and bounded errors; no real account was used for this demonstration.</p></article></div>
+          <div className="case-copy-grid"><p><strong>Persisted state:</strong> Staff can inspect synchronization status, synthetic contact ID, reviewer, review time, and a safe failure message without seeing tokens or raw provider responses.</p><p><strong>Resilient behavior:</strong> CRM failure does not reverse approval, repeat approval is rejected, and already-synced records avoid duplicate synchronization.</p></div>
         </CaseSection>
 
         <CaseSection id="gallery" eyebrow="Visual walkthrough" title="Four approved states from the synthetic demonstration">

@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'HopeHands',
     type: 'Supporting project',
-    summary: 'A role-protected volunteer onboarding workflow with controlled CSV intake, administrative reporting, and failure-aware HubSpot synchronization.',
+    summary: 'A role-protected volunteer onboarding and HubSpot CRM workflow with controlled CSV intake, administrative reporting, persisted synchronization states, and safe failure handling.',
     technologies: ['React', 'Django REST Framework', 'MySQL', 'JWT', 'HubSpot'],
     visualLabel: 'Volunteer onboarding · resilient CRM boundary',
     caseStudyUrl: '/projects/hopehands/',
