@@ -5,12 +5,15 @@ function Skills() {
   return (
     <section className="section section--tinted" id="skills" aria-labelledby="skills-heading">
       <div className="container">
-        <SectionHeading eyebrow="Skills" title="Tools I use to build for the web" introduction="A focused full-stack toolkit developed through coursework and portfolio projects." titleId="skills-heading" />
-        <ul className="skills-grid">
-          {skills.map((skill, index) => (
-            <li key={skill}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{skill}</li>
+        <SectionHeading eyebrow="Skills" title="Development, analysis and delivery toolkit" introduction="Current web-development capability supported by established engineering and technical-delivery experience." titleId="skills-heading" />
+        <div className="skills-groups">
+          {skills.map(([group, items]) => (
+            <article className="skills-group" key={group}>
+              <h3>{group}</h3>
+              <ul>{items.map((item) => <li key={item}>{item}</li>)}</ul>
+            </article>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )

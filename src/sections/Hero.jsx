@@ -4,21 +4,23 @@ function Hero() {
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">Derek Wong · Developer portfolio</p>
-          <h1 id="hero-title">Full-Stack Web Developer</h1>
+          <h1 id="hero-title">Full-Stack Web Developer <span>Digital Solutions Professional</span></h1>
           <p className="hero-lead">
-            I build practical, user-focused web applications while transitioning into a career in full-stack development. My portfolio brings together React interfaces, Django APIs, relational data, and clearly documented project decisions.
+            A career-transitioning developer combining recent React, Django and MySQL project experience with more than 20 years in systems management, technical operations, process improvement and stakeholder coordination.
           </p>
           <div className="hero-actions">
             <a className="button button--primary" href="#projects">View Projects</a>
-            <a className="button button--secondary" href="https://github.com/derekwongha" target="_blank" rel="noreferrer">View GitHub</a>
+            <a className="button button--secondary" href="/resume/Derek_Wong_Resume_August_2026_public.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+            <a className="text-link" href="#contact">Contact Me</a>
           </div>
         </div>
         <div className="hero-panel" aria-label="Development focus">
-          <p>Development focus</p>
-          <strong>Accessible interfaces</strong>
-          <strong>Reliable APIs</strong>
-          <strong>Clear data workflows</strong>
+          <p>Career snapshot</p>
+          <strong>Full-stack diploma completed</strong>
+          <strong>Four published projects</strong>
+          <strong>20+ years of technical operations</strong>
           <span>React · Django · MySQL</span>
+          <small>Open to junior, contract, project-based and permanent opportunities.</small>
         </div>
       </div>
     </section>
