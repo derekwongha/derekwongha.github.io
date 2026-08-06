@@ -48,7 +48,7 @@ function SilentLibraryCaseStudy() {
         </CaseSection>
 
         <CaseSection id="coursework" eyebrow="Coursework and authorship" title="Independent foundations with transparent later refinement" tinted>
-          <div className="case-copy-grid"><p>The original coursework application was independently designed and implemented by Derek Wong without AI assistance. It established the Django project structure, authentication, relational models, search, catalogue administration and early borrowing records.</p><p>Later portfolio work strengthened configuration safety, controlled data, tests, documentation, borrowing behavior and presentation through a human-directed, AI-supported process.</p></div>
+          <div className="case-copy-grid"><p>The original coursework application was independently designed and implemented by Derek Wong without AI assistance. It established the Django project structure, authentication, relational models, search, catalogue administration and early borrowing records.</p><p>Later portfolio work strengthened configuration safety, controlled data, tests, documentation, borrowing behaviour and presentation through a human-directed, AI-supported process.</p></div>
         </CaseSection>
 
         <CaseSection id="problem" eyebrow="Problem and intended users" title="Make a small catalogue understandable for members and staff">

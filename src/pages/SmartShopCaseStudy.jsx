@@ -24,7 +24,7 @@ const implemented = [
   ['Controlled recommendations', 'Two synthetic profiles demonstrate purchase-pattern recommendations without representing customer accounts.'],
   ['Virtual assistant', 'Assistant responses include readable catalogue cards and source disclosure.'],
   ['Descriptions and review summaries', 'Descriptions disclose their source; review summaries use only stored synthetic reviews.'],
-  ['Resilience controls', 'Provider order, eight-second timeouts, bounded retries, scoped throttling, and explicit fallback metadata keep behavior truthful.'],
+  ['Resilience controls', 'Provider order, eight-second timeouts, bounded retries, scoped throttling, and explicit fallback metadata keep behaviour truthful.'],
   ['Controlled ORM seed', 'A managed, idempotent seed creates the 50-product demonstration catalogue without relying on a SQL dump.'],
 ]
 
@@ -63,7 +63,7 @@ function SmartShopCaseStudy() {
           <div className="metric-grid">{smartShopMetrics.map(([value, label]) => <article key={label}><strong>{value}</strong><span>{label}</span></article>)}</div>
         </CaseSection>
 
-        <CaseSection id="challenge" eyebrow="Challenge" title="Useful AI behavior without pretending the model is the database" tinted>
+        <CaseSection id="challenge" eyebrow="Challenge" title="Useful AI behaviour without pretending the model is the database" tinted>
           <div className="case-copy-grid"><p>Shopping suggestions must reference products that actually exist. Provider responses can fail, time out, or return unusable identifiers, so catalogue records remain the source of truth.</p><p>Recommendation context also needed a safe boundary. Controlled synthetic profiles demonstrate purchase patterns without implying authentication, real customers, or production commerce.</p></div>
           <div className="status-note"><strong>Presentation boundary:</strong> SmartShop is a synthetic local demonstration with no checkout, payment, customer authentication, or live application deployment.</div>
         </CaseSection>
