@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 470" role="img" aria-labelledby="t d">
+  <title id="t">Local AI job-screening workflow</title>
+  <desc id="d">Gmail alerts are collected and deduplicated, recorded in SQLite, cleaned and analysed by a local model, reviewed on a dashboard, and a human chooses Skip or Pursue before any cover letter, manual submission and tracker update.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#5b6785"/></marker>
+    <style>
+      .box{fill:#fff;stroke:#c8d0e3;stroke-width:1.5}
+      .code{fill:#eef3fb;stroke:#8aa0cf;stroke-width:1.5}
+      .ai{fill:#e8f4ee;stroke:#4a9a7c;stroke-width:1.5}
+      .human{fill:#fff4e0;stroke:#d79a2b;stroke-width:2}
+      .t{font:600 15px system-ui,Segoe UI,Arial,sans-serif;fill:#1c2540}
+      .s{font:13px system-ui,Segoe UI,Arial,sans-serif;fill:#5b6785}
+      .l{font:700 12px system-ui,Segoe UI,Arial,sans-serif;fill:#5b6785;letter-spacing:.06em}
+      .ln{stroke:#5b6785;stroke-width:1.8;fill:none}
+    </style>
+  </defs>
+  <rect width="980" height="470" fill="#fbfcfe"/>
+  <!-- Row 1 -->
+  <rect class="box" x="30" y="50" width="200" height="74" rx="12"/><text class="t" x="130" y="82" text-anchor="middle">Gmail job alerts</text><text class="s" x="130" y="104" text-anchor="middle">read-only OAuth</text>
+  <rect class="code" x="290" y="50" width="200" height="74" rx="12"/><text class="t" x="390" y="82" text-anchor="middle">Collect &amp; deduplicate</text><text class="s" x="390" y="104" text-anchor="middle">canonical job IDs (Python)</text>
+  <rect class="code" x="550" y="50" width="200" height="74" rx="12"/><text class="t" x="650" y="82" text-anchor="middle">SQLite state</text><text class="s" x="650" y="104" text-anchor="middle">seen · analysed · decided</text>
+  <rect class="code" x="780" y="50" width="170" height="74" rx="12"/><text class="t" x="865" y="82" text-anchor="middle">Fetch &amp; clean page</text><text class="s" x="865" y="104" text-anchor="middle">deterministic</text>
+  <path class="ln" marker-end="url(#a)" d="M230 87H288"/><path class="ln" marker-end="url(#a)" d="M490 87H548"/><path class="ln" marker-end="url(#a)" d="M750 87H778"/>
+  <!-- Row 2 -->
+  <rect class="ai" x="780" y="190" width="170" height="86" rx="12"/><text class="t" x="865" y="222" text-anchor="middle">Local model</text><text class="s" x="865" y="244" text-anchor="middle">one grounded call</text><text class="s" x="865" y="262" text-anchor="middle">per new listing</text>
+  <rect class="box" x="550" y="190" width="200" height="86" rx="12"/><text class="t" x="650" y="222" text-anchor="middle">Review dashboard</text><text class="s" x="650" y="244" text-anchor="middle">analysis next to the</text><text class="s" x="650" y="262" text-anchor="middle">evidence it used</text>
+  <rect class="human" x="290" y="190" width="200" height="86" rx="12"/><text class="t" x="390" y="222" text-anchor="middle">Human decision</text><text class="s" x="390" y="244" text-anchor="middle">Skip or Pursue</text><text class="l" x="390" y="264" text-anchor="middle">YOU DECIDE</text>
+  <path class="ln" marker-end="url(#a)" d="M865 124V188"/><path class="ln" marker-end="url(#a)" d="M780 233H752"/><path class="ln" marker-end="url(#a)" d="M550 233H492"/>
+  <!-- Row 3 -->
+  <rect class="ai" x="30" y="330" width="200" height="86" rx="12"/><text class="t" x="130" y="362" text-anchor="middle">Cover-letter draft</text><text class="s" x="130" y="384" text-anchor="middle">optional · verified evidence</text><text class="s" x="130" y="402" text-anchor="middle">only</text>
+  <rect class="human" x="290" y="330" width="200" height="86" rx="12"/><text class="t" x="390" y="362" text-anchor="middle">I apply myself</text><text class="s" x="390" y="384" text-anchor="middle">outside the system</text><text class="l" x="390" y="404" text-anchor="middle">YOU ACT</text>
+  <rect class="box" x="550" y="330" width="200" height="86" rx="12"/><text class="t" x="650" y="362" text-anchor="middle">Mark applied</text><text class="s" x="650" y="384" text-anchor="middle">tracker row written with</text><text class="s" x="650" y="402" text-anchor="middle">backup and rollback</text>
+  <path class="ln" marker-end="url(#a)" d="M340 276V328" transform="translate(0 0)"/>
+  <path class="ln" marker-end="url(#a)" d="M290 233H130V328"/>
+  <path class="ln" marker-end="url(#a)" d="M232 373H288"/><path class="ln" marker-end="url(#a)" d="M490 373H548"/>
+  <!-- Legend -->
+  <rect class="code" x="780" y="338" width="16" height="16" rx="3"/><text class="s" x="804" y="351">Code decides</text>
+  <rect class="ai" x="780" y="362" width="16" height="16" rx="3"/><text class="s" x="804" y="375">Local model judges</text>
+  <rect class="human" x="780" y="386" width="16" height="16" rx="3"/><text class="s" x="804" y="399">Human decides</text>
+</svg>

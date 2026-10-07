@@ -15,6 +15,7 @@ export default defineConfig({
         smartshop: resolve(rootDirectory, 'projects/smartshop/index.html'),
         hopehands: resolve(rootDirectory, 'projects/hopehands/index.html'),
         silentlibrary: resolve(rootDirectory, 'projects/silentlibrary/index.html'),
+        localai: resolve(rootDirectory, 'projects/localai/index.html'),
       },
     },
   },

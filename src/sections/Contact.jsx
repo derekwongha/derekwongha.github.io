@@ -16,7 +16,7 @@ function Contact() {
           </div>
           <div><span>Portfolio</span><a href="https://derekwongha.github.io/">derekwongha.github.io</a></div>
           <div><span>Location</span><p>Singapore</p></div>
-          <div><span>Resume</span><a href="/resume/Derek_Wong_Resume_August_2026_public.pdf" target="_blank" rel="noreferrer">Download resume PDF</a></div>
+          <div><span>Resume</span><a href="/resume/Derek_Wong_Resume_October_2026_public.pdf" target="_blank" rel="noreferrer">Download resume PDF</a></div>
         </address>
       </div>
     </section>

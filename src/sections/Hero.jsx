@@ -10,14 +10,14 @@ function Hero() {
           </p>
           <div className="hero-actions">
             <a className="button button--primary" href="#projects">View Projects</a>
-            <a className="button button--secondary" href="/resume/Derek_Wong_Resume_August_2026_public.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+            <a className="button button--secondary" href="/resume/Derek_Wong_Resume_October_2026_public.pdf" target="_blank" rel="noreferrer">Download Resume</a>
             <a className="text-link" href="#contact">Contact Me</a>
           </div>
         </div>
         <div className="hero-panel" aria-label="Development focus">
           <p>Career snapshot</p>
           <strong>Full-stack diploma completed</strong>
-          <strong>Four published projects</strong>
+          <strong>Five published projects</strong>
           <strong>20+ years of technical operations</strong>
           <span>React · Django · MySQL</span>
           <small>Open to junior, contract, project-based and permanent opportunities.</small>

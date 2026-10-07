@@ -36,6 +36,14 @@ const projects = [
     caseStudyUrl: '/projects/silentlibrary/',
     sourceUrl: 'https://github.com/derekwongha/silentlibrary-django',
   },
+  {
+    title: 'Local AI Job-Screening Workflow',
+    type: 'Personal automation project',
+    summary: 'A local, human-in-the-loop workflow that reads job alerts from Gmail, deduplicates them in persistent state, assesses fit with a local model grounded in verified evidence, and leaves every decision to me.',
+    technologies: ['Python', 'SQLite', 'Gmail API', 'Local LLM', 'Excel'],
+    visualLabel: 'Local AI · human decides',
+    caseStudyUrl: '/projects/localai/',
+  },
 ]
 
 export default projects
