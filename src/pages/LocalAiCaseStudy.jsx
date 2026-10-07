@@ -1,6 +1,6 @@
 import Footer from '../components/Footer.jsx'
 import Header from '../components/Header.jsx'
-import { localAiMetrics, localAiStack } from '../data/localai.js'
+import { localAiMetrics, localAiScreenshots, localAiStack } from '../data/localai.js'
 
 const mediaRoot = '/projects/localai'
 
@@ -85,6 +85,18 @@ function LocalAiCaseStudy() {
 
         <CaseSection id="implementation" eyebrow="What I implemented" title="Six stages from inbox to tracker">
           <div className="case-card-grid case-card-grid--three">{implemented.map(([title, text]) => <article className="case-card" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
+        </CaseSection>
+
+        <CaseSection id="demo" eyebrow="Visual walkthrough" title="The review workflow, shown with synthetic data">
+          <p className="case-intro">These views come from a demonstration copy that contains fictional companies and a blank tracker, so no real listings, applications or personal details appear. The analysis in the live tool runs on my personal laptop.</p>
+          <div className="screenshot-grid localai-gallery">{localAiScreenshots.map(([filename, caption, alt], index) => <figure key={filename}><a href={`${mediaRoot}/images/${filename}`} target="_blank" rel="noreferrer" aria-label={`Open screenshot ${index + 1} at full size: ${caption}`}><img src={`${mediaRoot}/images/${filename}`} alt={alt} loading="lazy" /></a><figcaption><span>{String(index + 1).padStart(2, '0')}</span>{caption}</figcaption></figure>)}</div>
+          <h3 className="localai-video-heading">32-second captioned walkthrough</h3>
+          <div className="video-frame localai-video">
+            <video controls preload="metadata" playsInline>
+              <source src={`${mediaRoot}/video/localai-demo.mp4`} type="video/mp4" />
+              Your browser cannot play this H.264 video. <a href={`${mediaRoot}/video/localai-demo.mp4`}>Open the MP4 directly</a>.
+            </video>
+          </div>
         </CaseSection>
 
         <CaseSection id="architecture" eyebrow="Architecture" title="Deterministic pipeline, one grounded model call, human decision" tinted>
