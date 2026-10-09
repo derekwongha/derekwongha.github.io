@@ -43,6 +43,7 @@ const projects = [
     technologies: ['Python', 'SQLite', 'Gmail API', 'Local LLM', 'Excel'],
     visualLabel: 'Local AI · human decides',
     caseStudyUrl: '/projects/localai/',
+    sourceUrl: 'https://github.com/derekwongha/career-assistant-public',
   },
 ]
 

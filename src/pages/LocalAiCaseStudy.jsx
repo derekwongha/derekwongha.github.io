@@ -48,7 +48,7 @@ const boundaries = [
   'No retrieval-augmented generation, vector database or agent framework.',
   'Gmail access is read-only; credentials and tokens stay private and are never published.',
   'Local model only: no listing or email content is sent to a cloud AI service.',
-  'Source repository not yet published; this page describes the design and results, not the code.',
+  'The public repository is a sanitised copy with a synthetic demo; it contains no real job data, credentials or personal records.',
 ]
 
 function LocalAiCaseStudy() {
@@ -64,10 +64,11 @@ function LocalAiCaseStudy() {
               <p className="eyebrow">Personal automation project</p>
               <h1 id="case-title">Local AI Job-Screening Workflow</h1>
               <p className="case-hero__lead">A local, human-in-the-loop workflow that turns daily job-alert emails into reviewed decisions, using deterministic code for certainty and a local model only where judgement is needed.</p>
+              <div className="hero-actions"><a className="button button--primary" href="https://github.com/derekwongha/career-assistant-public" target="_blank" rel="noreferrer">View GitHub source</a></div>
             </div>
             <aside className="case-status" aria-label="Project status">
               <span>Project status</span><strong>Operational on my own laptop</strong>
-              <p>In daily use since October 2026. Source repository not yet published.</p>
+              <p>In daily use since October 2026. Sanitised source published on GitHub.</p>
               <dl><div><dt>Core stack</dt><dd>Python · SQLite · Gmail API</dd></div><div><dt>AI boundary</dt><dd>Local LLM via LM Studio · human decides</dd></div><div><dt>Integration</dt><dd>Excel application tracker</dd></div></dl>
             </aside>
           </div>
@@ -118,7 +119,7 @@ function LocalAiCaseStudy() {
 
         <CaseSection id="verification" eyebrow="Verification" title="Tested components and a recovery run on real data" tinted>
           <div className="test-summary"><strong>33 / 33</strong><span>jobs recovered in one run</span><dl><div><dt>Timeouts</dt><dd>0</dd></div><div><dt>Schema errors</dt><dd>0</dd></div><div><dt>Re-analysed jobs</dt><dd>None (state reused)</dd></div></dl></div>
-          <p className="case-intro verification-note">The project includes a suite of automated tests for the pipeline, the analysis schema and the tracker writer. One expired listing returned a 404 and was recorded as a dead upstream resource rather than an application fault.</p>
+          <p className="case-intro verification-note">The project includes a suite of automated tests for the pipeline, the analysis schema and the tracker writer. One expired listing returned a 404 and was recorded as a dead upstream resource rather than an application fault. A sanitised public version with a synthetic demo and offline tests is available on GitHub.</p>
         </CaseSection>
 
         <CaseSection id="boundaries" eyebrow="Scope boundaries" title="A personal workflow tool, not a product">
@@ -129,7 +130,7 @@ function LocalAiCaseStudy() {
           <div className="case-long-copy"><p>I directed the requirements, architecture, evaluation and acceptance decisions. AI tools supported parts of implementation, debugging and documentation; I reviewed the outputs and I own the final decisions and presentation.</p></div>
         </CaseSection>
 
-        <section className="case-actions" aria-labelledby="next-heading"><div className="container case-actions__inner"><div><p className="eyebrow">Explore further</p><h2 id="next-heading">Return to the portfolio</h2></div><div className="hero-actions"><a className="button button--secondary" href="/#projects">Back to all projects</a></div></div></section>
+        <section className="case-actions" aria-labelledby="next-heading"><div className="container case-actions__inner"><div><p className="eyebrow">Explore further</p><h2 id="next-heading">Review the source or return to the portfolio</h2></div><div className="hero-actions"><a className="button button--primary" href="https://github.com/derekwongha/career-assistant-public" target="_blank" rel="noreferrer">View GitHub source</a><a className="button button--secondary" href="/#projects">Back to all projects</a></div></div></section>
       </main>
       <Footer />
     </>
